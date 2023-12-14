@@ -1,0 +1,16 @@
+setup.py
+loosely/LooseNamedObj.py
+loosely/__init__.py
+loosely/atom.py
+loosely/base.py
+loosely/dataset.py
+loosely/function.py
+loosely/process.py
+loosely/test.py
+loosely/tree.py
+loosely/utils.py
+loosely.egg-info/PKG-INFO
+loosely.egg-info/SOURCES.txt
+loosely.egg-info/dependency_links.txt
+loosely.egg-info/not-zip-safe
+loosely.egg-info/top_level.txt

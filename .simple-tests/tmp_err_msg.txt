@@ -1,0 +1,25 @@
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\unit_run\components.py", line 475, in to_info_dict
+    src_obj = self.check_src_obj()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\unit_run\components.py", line 330, in check_src_obj
+    src_obj = find_callable_by_name(str(Path(self.meta.src_path).resolve()), self.meta.src_name)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\unit_run\utils.py", line 95, in find_callable_by_name
+    result = list(filter(lambda c: c.__name__ == name, inspect_callables_by_path(path)))
+  File "C:\ProgramData\Anaconda3\lib\site-packages\unit_run\utils.py", line 45, in inspect_callables_by_path
+    return inspect_by_path(path, filter_func, with_name=False)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\unit_run\utils.py", line 19, in inspect_by_path
+    _tmp_module = importlib.machinery.SourceFileLoader('_tmp_module', path).load_module()
+  File "<frozen importlib._bootstrap_external>", line 529, in _check_name_wrapper
+  File "<frozen importlib._bootstrap_external>", line 1029, in load_module
+  File "<frozen importlib._bootstrap_external>", line 854, in load_module
+  File "<frozen importlib._bootstrap>", line 271, in _load_module_shim
+  File "<frozen importlib._bootstrap>", line 613, in _exec
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "D:\documents\AcademicDocuments\customed_python_pkgs\loosely\pytest\test.py", line 6, in <module>
+    from loosely.atom import LooseAtomDict, LooseAtomArray
+  File "D:\documents\AcademicDocuments\customed_python_pkgs\loosely\loosely\atom.py", line 67, in <module>
+    class LooseAtomFunc(LooseAtomObj):
+  File "D:\documents\AcademicDocuments\customed_python_pkgs\loosely\loosely\atom.py", line 70, in LooseAtomFunc
+    SUPPORT_DATA_TYPE = function
+NameError: name 'function' is not defined

@@ -1,0 +1,25 @@
+[
+  1213,
+  "123",
+  {
+    "test": "<loosely-atom_arr '2-test' |shape:(2)|>"
+  },
+  {
+    "test": "<loosely-atom_arr '3-test' |shape:(2)|>"
+  },
+  {
+    "test": "<loosely-atom_arr '4-test' |shape:(2)|>"
+  },
+  {
+    "test1": 1,
+    "test2": "<loosely-atom_arr '5-test2' |shape:(3)|>",
+    "test3": [
+      null,
+      "<loosely-tree_dict '5-test3-1' |3 keys|>"
+    ]
+  },
+  "<loosely-tree_arr '6' |3 items|>",
+  {
+    "test": "<loosely-atom_arr '7-test' |shape:(2)|>"
+  }
+]

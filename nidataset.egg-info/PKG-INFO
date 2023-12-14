@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: nidataset
+Version: 1.0
+Summary: Easy to create and read a large Neuroimaging dataset with extra data for machine learning.
+Home-page: #
+Author: Lingfei He
+Author-email: lingfei@tju.edu.cn
+License: MIT

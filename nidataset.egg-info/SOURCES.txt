@@ -1,0 +1,10 @@
+setup.py
+nidataset/NeuroDataset.py
+nidataset/__init__.py
+nidataset/test.py
+nidataset/utils.py
+nidataset.egg-info/PKG-INFO
+nidataset.egg-info/SOURCES.txt
+nidataset.egg-info/dependency_links.txt
+nidataset.egg-info/not-zip-safe
+nidataset.egg-info/top_level.txt

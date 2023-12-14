@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: loosely
+Version: 1.0
+Summary: Easy to create and read a large complex dataset with extra data for batched computing
+Home-page: #
+Author: Lingfei He
+Author-email: lingfei@tju.edu.cn
+License: MIT

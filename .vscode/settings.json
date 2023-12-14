@@ -1,0 +1,9 @@
+{
+    "python.testing.pytestArgs": [
+        "pytest",
+        "-s"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "iis.configDir": ""
+}
