@@ -1,0 +1,10 @@
+{
+  "test5": "<loosely-atom_arr 'test5' |shape:(3)|>",
+  "test6": "<loosely-atom_dict 'test6' |1 key|>",
+  "test7": {
+    "test7_1": 1,
+    "test7_2": "<loosely-atom_arr 'test7-test7_2' |shape:(3)|>"
+  },
+  "test8": "<loosely-atom_arr 'test8' |shape:(3)|>",
+  "test9": "<loosely-tree_dict 'test9' |2 keys|>"
+}

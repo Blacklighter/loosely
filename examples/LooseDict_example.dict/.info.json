@@ -11,9 +11,5 @@
     },
     "<loosely-atom_arr 'test3-3' |shape:(3)|>"
   ],
-  "test4": {
-    "test5": "<loosely-atom_arr 'test4-test5' |shape:(3)|>",
-    "test6": "<loosely-tree_dict 'test4-test6' |1 key|>"
-  },
-  "test11": "<loosely-atom_arr 'test11' |shape:(2)|>"
+  "test4": "<loosely-tree_dict 'test4' |5 keys|>"
 }

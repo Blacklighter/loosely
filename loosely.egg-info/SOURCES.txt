@@ -1,3 +1,5 @@
+LICENSE
+README.md
 setup.py
 loosely/LooseNamedObj.py
 loosely/__init__.py

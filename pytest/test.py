@@ -1,5 +1,3 @@
-import os, sys
-sys.path.append(os.path.abspath(os.path.join(__file__, '..', '..')))
 # from loosely.base import LooseBase, FileType
 import numpy as np
 from loosely import utils, tree
@@ -40,8 +38,8 @@ def test_LooseAtomDict_load():
     
 
 def test_LooseAtomDict_create():
-    save_path = utils.get_example_path('LooseAtomDict_example.json')
-    data = {'test': 111}
+    save_path = 'D:/documents/AcademicDocuments/customed_python_pkgs/loosely/examples/LooseAtomDict_example.json'
+    data = {'name': 'test'}
     obj = LooseAtomDict(data)
     print(obj)
     obj.save(save_path)
@@ -80,7 +78,7 @@ def test_LooseAtomFunc_create():
 
 
 def test_LooseDict_create():
-    save_path = utils.get_example_path('LooseDict_example.dict')
+    save_path = 'D:/documents/AcademicDocuments/customed_python_pkgs/loosely/examples/LooseDict_example.dict'
     # l = np.array('test')
     # print(l, type(l), l.dtype)
     # print(tree.LooseDict.is_matched_load_path(load_path))
@@ -128,7 +126,7 @@ def test_LooseDict_create():
     # # print(d['t1'])
 
 def test_LooseDict_load():
-    load_path = utils.get_example_path('LooseDict_example.dict')
+    load_path = 'D:/documents/AcademicDocuments/customed_python_pkgs/loosely/examples/LooseDict_example.dict'
     d = tree.LooseDict.load_from_disk(load_path)
     print(d)
     # d['test11'] = np.array([1,0])

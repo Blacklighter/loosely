@@ -1,402 +1,102 @@
 [
-  {
-    "test1": "<loosely-atom_arr '0-test1' |shape:(50\u00d750)|>",
-    "test2": 2
-  },
-  {
-    "test1": "<loosely-atom_arr '1-test1' |shape:(50\u00d750)|>",
-    "test2": 4
-  },
-  {
-    "test1": "<loosely-atom_arr '2-test1' |shape:(50\u00d750)|>",
-    "test2": 8
-  },
-  {
-    "test1": "<loosely-atom_arr '3-test1' |shape:(50\u00d750)|>",
-    "test2": 2
-  },
-  {
-    "test1": "<loosely-atom_arr '4-test1' |shape:(50\u00d750)|>",
-    "test2": 0
-  },
-  {
-    "test1": "<loosely-atom_arr '5-test1' |shape:(50\u00d750)|>",
-    "test2": 10
-  },
-  {
-    "test1": "<loosely-atom_arr '6-test1' |shape:(50\u00d750)|>",
-    "test2": 2
-  },
-  {
-    "test1": "<loosely-atom_arr '7-test1' |shape:(50\u00d750)|>",
-    "test2": 3
-  },
-  {
-    "test1": "<loosely-atom_arr '8-test1' |shape:(50\u00d750)|>",
-    "test2": 8
-  },
-  {
-    "test1": "<loosely-atom_arr '9-test1' |shape:(50\u00d750)|>",
-    "test2": 2
-  },
-  {
-    "test1": "<loosely-atom_arr '10-test1' |shape:(50\u00d750)|>",
-    "test2": 6
-  },
-  {
-    "test1": "<loosely-atom_arr '11-test1' |shape:(50\u00d750)|>",
-    "test2": 7
-  },
-  {
-    "test1": "<loosely-atom_arr '12-test1' |shape:(50\u00d750)|>",
-    "test2": 3
-  },
-  {
-    "test1": "<loosely-atom_arr '13-test1' |shape:(50\u00d750)|>",
-    "test2": 7
-  },
-  {
-    "test1": "<loosely-atom_arr '14-test1' |shape:(50\u00d750)|>",
-    "test2": 3
-  },
-  {
-    "test1": "<loosely-atom_arr '15-test1' |shape:(50\u00d750)|>",
-    "test2": 1
-  },
-  {
-    "test1": "<loosely-atom_arr '16-test1' |shape:(50\u00d750)|>",
-    "test2": 8
-  },
-  {
-    "test1": "<loosely-atom_arr '17-test1' |shape:(50\u00d750)|>",
-    "test2": 7
-  },
-  {
-    "test1": "<loosely-atom_arr '18-test1' |shape:(50\u00d750)|>",
-    "test2": 7
-  },
-  {
-    "test1": "<loosely-atom_arr '19-test1' |shape:(50\u00d750)|>",
-    "test2": 2
-  },
-  {
-    "test1": "<loosely-atom_arr '20-test1' |shape:(50\u00d750)|>",
-    "test2": 2
-  },
-  {
-    "test1": "<loosely-atom_arr '21-test1' |shape:(50\u00d750)|>",
-    "test2": 7
-  },
-  {
-    "test1": "<loosely-atom_arr '22-test1' |shape:(50\u00d750)|>",
-    "test2": 0
-  },
-  {
-    "test1": "<loosely-atom_arr '23-test1' |shape:(50\u00d750)|>",
-    "test2": 0
-  },
-  {
-    "test1": "<loosely-atom_arr '24-test1' |shape:(50\u00d750)|>",
-    "test2": 8
-  },
-  {
-    "test1": "<loosely-atom_arr '25-test1' |shape:(50\u00d750)|>",
-    "test2": 6
-  },
-  {
-    "test1": "<loosely-atom_arr '26-test1' |shape:(50\u00d750)|>",
-    "test2": 1
-  },
-  {
-    "test1": "<loosely-atom_arr '27-test1' |shape:(50\u00d750)|>",
-    "test2": 2
-  },
-  {
-    "test1": "<loosely-atom_arr '28-test1' |shape:(50\u00d750)|>",
-    "test2": 4
-  },
-  {
-    "test1": "<loosely-atom_arr '29-test1' |shape:(50\u00d750)|>",
-    "test2": 1
-  },
-  {
-    "test1": "<loosely-atom_arr '30-test1' |shape:(50\u00d750)|>",
-    "test2": 1
-  },
-  {
-    "test1": "<loosely-atom_arr '31-test1' |shape:(50\u00d750)|>",
-    "test2": 7
-  },
-  {
-    "test1": "<loosely-atom_arr '32-test1' |shape:(50\u00d750)|>",
-    "test2": 6
-  },
-  {
-    "test1": "<loosely-atom_arr '33-test1' |shape:(50\u00d750)|>",
-    "test2": 6
-  },
-  {
-    "test1": "<loosely-atom_arr '34-test1' |shape:(50\u00d750)|>",
-    "test2": 3
-  },
-  {
-    "test1": "<loosely-atom_arr '35-test1' |shape:(50\u00d750)|>",
-    "test2": 5
-  },
-  {
-    "test1": "<loosely-atom_arr '36-test1' |shape:(50\u00d750)|>",
-    "test2": 7
-  },
-  {
-    "test1": "<loosely-atom_arr '37-test1' |shape:(50\u00d750)|>",
-    "test2": 1
-  },
-  {
-    "test1": "<loosely-atom_arr '38-test1' |shape:(50\u00d750)|>",
-    "test2": 1
-  },
-  {
-    "test1": "<loosely-atom_arr '39-test1' |shape:(50\u00d750)|>",
-    "test2": 9
-  },
-  {
-    "test1": "<loosely-atom_arr '40-test1' |shape:(50\u00d750)|>",
-    "test2": 3
-  },
-  {
-    "test1": "<loosely-atom_arr '41-test1' |shape:(50\u00d750)|>",
-    "test2": 7
-  },
-  {
-    "test1": "<loosely-atom_arr '42-test1' |shape:(50\u00d750)|>",
-    "test2": 9
-  },
-  {
-    "test1": "<loosely-atom_arr '43-test1' |shape:(50\u00d750)|>",
-    "test2": 0
-  },
-  {
-    "test1": "<loosely-atom_arr '44-test1' |shape:(50\u00d750)|>",
-    "test2": 7
-  },
-  {
-    "test1": "<loosely-atom_arr '45-test1' |shape:(50\u00d750)|>",
-    "test2": 0
-  },
-  {
-    "test1": "<loosely-atom_arr '46-test1' |shape:(50\u00d750)|>",
-    "test2": 4
-  },
-  {
-    "test1": "<loosely-atom_arr '47-test1' |shape:(50\u00d750)|>",
-    "test2": 1
-  },
-  {
-    "test1": "<loosely-atom_arr '48-test1' |shape:(50\u00d750)|>",
-    "test2": 10
-  },
-  {
-    "test1": "<loosely-atom_arr '49-test1' |shape:(50\u00d750)|>",
-    "test2": 8
-  },
-  {
-    "test1": "<loosely-atom_arr '50-test1' |shape:(50\u00d750)|>",
-    "test2": 2
-  },
-  {
-    "test1": "<loosely-atom_arr '51-test1' |shape:(50\u00d750)|>",
-    "test2": 1
-  },
-  {
-    "test1": "<loosely-atom_arr '52-test1' |shape:(50\u00d750)|>",
-    "test2": 10
-  },
-  {
-    "test1": "<loosely-atom_arr '53-test1' |shape:(50\u00d750)|>",
-    "test2": 0
-  },
-  {
-    "test1": "<loosely-atom_arr '54-test1' |shape:(50\u00d750)|>",
-    "test2": 6
-  },
-  {
-    "test1": "<loosely-atom_arr '55-test1' |shape:(50\u00d750)|>",
-    "test2": 0
-  },
-  {
-    "test1": "<loosely-atom_arr '56-test1' |shape:(50\u00d750)|>",
-    "test2": 7
-  },
-  {
-    "test1": "<loosely-atom_arr '57-test1' |shape:(50\u00d750)|>",
-    "test2": 3
-  },
-  {
-    "test1": "<loosely-atom_arr '58-test1' |shape:(50\u00d750)|>",
-    "test2": 3
-  },
-  {
-    "test1": "<loosely-atom_arr '59-test1' |shape:(50\u00d750)|>",
-    "test2": 8
-  },
-  {
-    "test1": "<loosely-atom_arr '60-test1' |shape:(50\u00d750)|>",
-    "test2": 6
-  },
-  {
-    "test1": "<loosely-atom_arr '61-test1' |shape:(50\u00d750)|>",
-    "test2": 2
-  },
-  {
-    "test1": "<loosely-atom_arr '62-test1' |shape:(50\u00d750)|>",
-    "test2": 1
-  },
-  {
-    "test1": "<loosely-atom_arr '63-test1' |shape:(50\u00d750)|>",
-    "test2": 6
-  },
-  {
-    "test1": "<loosely-atom_arr '64-test1' |shape:(50\u00d750)|>",
-    "test2": 9
-  },
-  {
-    "test1": "<loosely-atom_arr '65-test1' |shape:(50\u00d750)|>",
-    "test2": 1
-  },
-  {
-    "test1": "<loosely-atom_arr '66-test1' |shape:(50\u00d750)|>",
-    "test2": 10
-  },
-  {
-    "test1": "<loosely-atom_arr '67-test1' |shape:(50\u00d750)|>",
-    "test2": 8
-  },
-  {
-    "test1": "<loosely-atom_arr '68-test1' |shape:(50\u00d750)|>",
-    "test2": 6
-  },
-  {
-    "test1": "<loosely-atom_arr '69-test1' |shape:(50\u00d750)|>",
-    "test2": 7
-  },
-  {
-    "test1": "<loosely-atom_arr '70-test1' |shape:(50\u00d750)|>",
-    "test2": 4
-  },
-  {
-    "test1": "<loosely-atom_arr '71-test1' |shape:(50\u00d750)|>",
-    "test2": 10
-  },
-  {
-    "test1": "<loosely-atom_arr '72-test1' |shape:(50\u00d750)|>",
-    "test2": 6
-  },
-  {
-    "test1": "<loosely-atom_arr '73-test1' |shape:(50\u00d750)|>",
-    "test2": 9
-  },
-  {
-    "test1": "<loosely-atom_arr '74-test1' |shape:(50\u00d750)|>",
-    "test2": 6
-  },
-  {
-    "test1": "<loosely-atom_arr '75-test1' |shape:(50\u00d750)|>",
-    "test2": 6
-  },
-  {
-    "test1": "<loosely-atom_arr '76-test1' |shape:(50\u00d750)|>",
-    "test2": 5
-  },
-  {
-    "test1": "<loosely-atom_arr '77-test1' |shape:(50\u00d750)|>",
-    "test2": 6
-  },
-  {
-    "test1": "<loosely-atom_arr '78-test1' |shape:(50\u00d750)|>",
-    "test2": 7
-  },
-  {
-    "test1": "<loosely-atom_arr '79-test1' |shape:(50\u00d750)|>",
-    "test2": 5
-  },
-  {
-    "test1": "<loosely-atom_arr '80-test1' |shape:(50\u00d750)|>",
-    "test2": 8
-  },
-  {
-    "test1": "<loosely-atom_arr '81-test1' |shape:(50\u00d750)|>",
-    "test2": 6
-  },
-  {
-    "test1": "<loosely-atom_arr '82-test1' |shape:(50\u00d750)|>",
-    "test2": 1
-  },
-  {
-    "test1": "<loosely-atom_arr '83-test1' |shape:(50\u00d750)|>",
-    "test2": 8
-  },
-  {
-    "test1": "<loosely-atom_arr '84-test1' |shape:(50\u00d750)|>",
-    "test2": 8
-  },
-  {
-    "test1": "<loosely-atom_arr '85-test1' |shape:(50\u00d750)|>",
-    "test2": 4
-  },
-  {
-    "test1": "<loosely-atom_arr '86-test1' |shape:(50\u00d750)|>",
-    "test2": 1
-  },
-  {
-    "test1": "<loosely-atom_arr '87-test1' |shape:(50\u00d750)|>",
-    "test2": 3
-  },
-  {
-    "test1": "<loosely-atom_arr '88-test1' |shape:(50\u00d750)|>",
-    "test2": 8
-  },
-  {
-    "test1": "<loosely-atom_arr '89-test1' |shape:(50\u00d750)|>",
-    "test2": 9
-  },
-  {
-    "test1": "<loosely-atom_arr '90-test1' |shape:(50\u00d750)|>",
-    "test2": 0
-  },
-  {
-    "test1": "<loosely-atom_arr '91-test1' |shape:(50\u00d750)|>",
-    "test2": 4
-  },
-  {
-    "test1": "<loosely-atom_arr '92-test1' |shape:(50\u00d750)|>",
-    "test2": 10
-  },
-  {
-    "test1": "<loosely-atom_arr '93-test1' |shape:(50\u00d750)|>",
-    "test2": 9
-  },
-  {
-    "test1": "<loosely-atom_arr '94-test1' |shape:(50\u00d750)|>",
-    "test2": 9
-  },
-  {
-    "test1": "<loosely-atom_arr '95-test1' |shape:(50\u00d750)|>",
-    "test2": 4
-  },
-  {
-    "test1": "<loosely-atom_arr '96-test1' |shape:(50\u00d750)|>",
-    "test2": 0
-  },
-  {
-    "test1": "<loosely-atom_arr '97-test1' |shape:(50\u00d750)|>",
-    "test2": 0
-  },
-  {
-    "test1": "<loosely-atom_arr '98-test1' |shape:(50\u00d750)|>",
-    "test2": 5
-  },
-  {
-    "test1": "<loosely-atom_arr '99-test1' |shape:(50\u00d750)|>",
-    "test2": 9
-  }
+  "<loosely-tree_dict '0' |2 keys|>",
+  "<loosely-tree_dict '1' |2 keys|>",
+  "<loosely-tree_dict '2' |2 keys|>",
+  "<loosely-tree_dict '3' |2 keys|>",
+  "<loosely-tree_dict '4' |2 keys|>",
+  "<loosely-tree_dict '5' |2 keys|>",
+  "<loosely-tree_dict '6' |2 keys|>",
+  "<loosely-tree_dict '7' |2 keys|>",
+  "<loosely-tree_dict '8' |2 keys|>",
+  "<loosely-tree_dict '9' |2 keys|>",
+  "<loosely-tree_dict '10' |2 keys|>",
+  "<loosely-tree_dict '11' |2 keys|>",
+  "<loosely-tree_dict '12' |2 keys|>",
+  "<loosely-tree_dict '13' |2 keys|>",
+  "<loosely-tree_dict '14' |2 keys|>",
+  "<loosely-tree_dict '15' |2 keys|>",
+  "<loosely-tree_dict '16' |2 keys|>",
+  "<loosely-tree_dict '17' |2 keys|>",
+  "<loosely-tree_dict '18' |2 keys|>",
+  "<loosely-tree_dict '19' |2 keys|>",
+  "<loosely-tree_dict '20' |2 keys|>",
+  "<loosely-tree_dict '21' |2 keys|>",
+  "<loosely-tree_dict '22' |2 keys|>",
+  "<loosely-tree_dict '23' |2 keys|>",
+  "<loosely-tree_dict '24' |2 keys|>",
+  "<loosely-tree_dict '25' |2 keys|>",
+  "<loosely-tree_dict '26' |2 keys|>",
+  "<loosely-tree_dict '27' |2 keys|>",
+  "<loosely-tree_dict '28' |2 keys|>",
+  "<loosely-tree_dict '29' |2 keys|>",
+  "<loosely-tree_dict '30' |2 keys|>",
+  "<loosely-tree_dict '31' |2 keys|>",
+  "<loosely-tree_dict '32' |2 keys|>",
+  "<loosely-tree_dict '33' |2 keys|>",
+  "<loosely-tree_dict '34' |2 keys|>",
+  "<loosely-tree_dict '35' |2 keys|>",
+  "<loosely-tree_dict '36' |2 keys|>",
+  "<loosely-tree_dict '37' |2 keys|>",
+  "<loosely-tree_dict '38' |2 keys|>",
+  "<loosely-tree_dict '39' |2 keys|>",
+  "<loosely-tree_dict '40' |2 keys|>",
+  "<loosely-tree_dict '41' |2 keys|>",
+  "<loosely-tree_dict '42' |2 keys|>",
+  "<loosely-tree_dict '43' |2 keys|>",
+  "<loosely-tree_dict '44' |2 keys|>",
+  "<loosely-tree_dict '45' |2 keys|>",
+  "<loosely-tree_dict '46' |2 keys|>",
+  "<loosely-tree_dict '47' |2 keys|>",
+  "<loosely-tree_dict '48' |2 keys|>",
+  "<loosely-tree_dict '49' |2 keys|>",
+  "<loosely-tree_dict '50' |2 keys|>",
+  "<loosely-tree_dict '51' |2 keys|>",
+  "<loosely-tree_dict '52' |2 keys|>",
+  "<loosely-tree_dict '53' |2 keys|>",
+  "<loosely-tree_dict '54' |2 keys|>",
+  "<loosely-tree_dict '55' |2 keys|>",
+  "<loosely-tree_dict '56' |2 keys|>",
+  "<loosely-tree_dict '57' |2 keys|>",
+  "<loosely-tree_dict '58' |2 keys|>",
+  "<loosely-tree_dict '59' |2 keys|>",
+  "<loosely-tree_dict '60' |2 keys|>",
+  "<loosely-tree_dict '61' |2 keys|>",
+  "<loosely-tree_dict '62' |2 keys|>",
+  "<loosely-tree_dict '63' |2 keys|>",
+  "<loosely-tree_dict '64' |2 keys|>",
+  "<loosely-tree_dict '65' |2 keys|>",
+  "<loosely-tree_dict '66' |2 keys|>",
+  "<loosely-tree_dict '67' |2 keys|>",
+  "<loosely-tree_dict '68' |2 keys|>",
+  "<loosely-tree_dict '69' |2 keys|>",
+  "<loosely-tree_dict '70' |2 keys|>",
+  "<loosely-tree_dict '71' |2 keys|>",
+  "<loosely-tree_dict '72' |2 keys|>",
+  "<loosely-tree_dict '73' |2 keys|>",
+  "<loosely-tree_dict '74' |2 keys|>",
+  "<loosely-tree_dict '75' |2 keys|>",
+  "<loosely-tree_dict '76' |2 keys|>",
+  "<loosely-tree_dict '77' |2 keys|>",
+  "<loosely-tree_dict '78' |2 keys|>",
+  "<loosely-tree_dict '79' |2 keys|>",
+  "<loosely-tree_dict '80' |2 keys|>",
+  "<loosely-tree_dict '81' |2 keys|>",
+  "<loosely-tree_dict '82' |2 keys|>",
+  "<loosely-tree_dict '83' |2 keys|>",
+  "<loosely-tree_dict '84' |2 keys|>",
+  "<loosely-tree_dict '85' |2 keys|>",
+  "<loosely-tree_dict '86' |2 keys|>",
+  "<loosely-tree_dict '87' |2 keys|>",
+  "<loosely-tree_dict '88' |2 keys|>",
+  "<loosely-tree_dict '89' |2 keys|>",
+  "<loosely-tree_dict '90' |2 keys|>",
+  "<loosely-tree_dict '91' |2 keys|>",
+  "<loosely-tree_dict '92' |2 keys|>",
+  "<loosely-tree_dict '93' |2 keys|>",
+  "<loosely-tree_dict '94' |2 keys|>",
+  "<loosely-tree_dict '95' |2 keys|>",
+  "<loosely-tree_dict '96' |2 keys|>",
+  "<loosely-tree_dict '97' |2 keys|>",
+  "<loosely-tree_dict '98' |2 keys|>",
+  "<loosely-tree_dict '99' |2 keys|>"
 ]
