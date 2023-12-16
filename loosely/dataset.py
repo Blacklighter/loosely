@@ -88,18 +88,20 @@ class LooseDataset(LooseDict):
     def to_torch_dataset(self, item_getter=None):
         from torch.utils.data import Dataset
         item_getter = (lambda v, k, loose_dst: v) if item_getter is None else item_getter
-
+        table_rows = self.table.get_data()
         def _getter(self2, index):
-            item = self.table[index].get_data()
-            for v, trace, parent in deep_iter_items(item, lambda x: isinstance(x, LooseBase)):
-                parent[trace[-1]] = v.get_data()
+            item = table_rows[index].get_data()
+            # for v, trace, parent in deep_iter_items(item, lambda x: isinstance(x, LooseBase)):
+            #     parent[trace[-1]] = v.get_data()
             return item_getter(item, index, self)
 
         dataset_cls = type('LooselyTransformedDataset', (Dataset,), {
             '__getitem__': _getter,
-            '__len__': self.table.__len__
+            '__len__': self.table.__len__,
         })
-        return dataset_cls()
+        obj = dataset_cls()
+        setattr(obj, 'src_dst', self)
+        return obj
 # class LooseDataset(LooseDict):
 #     # @meta_property
 #     # def name(self, new_value):
