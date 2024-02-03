@@ -23,11 +23,11 @@ class LooseAtomDict(LooseAtom):
     CLS_ALIAS = 'atom_dict'
 
 
-    def __init__(self, data=dict()):
-        super().__init__(data)
+    def __init__(self, data=dict(), read_only=False):
+        super().__init__(data, read_only)
 
     @classmethod
-    def _load_data(cls, path):
+    def _load_data(cls, path, read_only=False):
         with open(path) as f:
             return json.load(f)
 
@@ -56,6 +56,7 @@ class LooseAtomDict(LooseAtom):
         return self.get_data()[key]
     
     def __setitem__(self, key, item):
+        self.check_read_only()
         self._check_key(key)
         if self.data is None and self.can_load:
             data = self.get_data()
@@ -70,11 +71,11 @@ class LooseAtomArray(LooseAtom):
     SUPPORT_INPUT_DATA_TYPE = [list, tuple, np.ndarray]
     CLS_ALIAS = 'atom_arr'
 
-    def __init__(self, data=list()):
-        super().__init__(np.array(data))
+    def __init__(self, data=list(), read_only=False):
+        super().__init__(np.array(data), read_only)
 
     @classmethod
-    def _load_data(cls, path):
+    def _load_data(cls, path, read_only=False):
         return np.load(path, allow_pickle=True)
 
     def _save_data(self, path):
@@ -104,16 +105,16 @@ class LooseAtomObj(LooseAtom):
     EXT = ''
     CLS_ALIAS = 'atom_obj'
 
-    def __init__(self, data):
-        super().__init__(data)
+    def __init__(self, data, read_only=False):
+        super().__init__(data, read_only)
 
     @classmethod
-    def _load_data(cls, path):
-        with open(path) as f:
+    def _load_data(cls, path, read_only=False):
+        with open(path, 'rb') as f:
             return pickle.load(f)
 
     def _save_data(self, path):
-        with open(path, 'w') as f:
+        with open(path, 'wb') as f:
             pickle.dump(self.data, f)
 
 def _func():
@@ -131,7 +132,7 @@ class LooseAtomNifti(LooseAtom):
     SUPPORT_INPUT_DATA_TYPE = nib.Nifti1Image
     CLS_ALIAS = 'atom_nii'
 
-    def __init__(self, data=list(), affine=None):
+    def __init__(self, data=list(), affine=None, read_only=False):
         if type(data) == str:
             if not Path(data).is_file():
                 raise FileNotFoundError(f"No such a nifti file path for '{self.__class__.__name__}': {data}")
@@ -142,7 +143,7 @@ class LooseAtomNifti(LooseAtom):
             if affine is None:
                 raise ValueError(f"Affine should be given when initiate '{self.__class__.__name__}' with array data.")
             img = nib.Nifti1Image(np.array(data), np.array(affine))
-        super().__init__(img)
+        super().__init__(img, read_only)
 
     @classmethod
     def _check_path_basically(cls, path):
@@ -157,7 +158,7 @@ class LooseAtomNifti(LooseAtom):
             raise ValueError(f"Suffixes of target path '{''.join(path_exts)}' is not matched for '{''.join(exts1)}' and '{''.join(exts2)}': {path}")
 
     @classmethod
-    def _load_data(cls, path):
+    def _load_data(cls, path, read_only=False):
         return nib.load(path)
 
     def _save_data(self, path):

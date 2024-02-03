@@ -8,7 +8,7 @@ import numpy as np
 from loosely.utils import deep_map, simple_deep_copy, deep_copy, deep_iter_items, is_parent_trace, \
 get_loosely_name_by_trace, extract_loosely_str, is_loosely_str, get_cls_from_alias, get_deep_item, set_deep_item, \
 remove_by_path, get_keys, get_values, get_items, TRACE_DIVIDER
-from loosely.atom import LooseAtomArray, LooseAtomDict, LooseAtom, LooseAtomNifti
+from loosely.atom import LooseAtomArray, LooseAtomDict, LooseAtom, LooseAtomNifti, LooseAtomFunc
 from loguru import logger
 from tqdm import tqdm
 import nibabel as nib
@@ -88,13 +88,13 @@ class LooseJSONTree(LooseTree):
         return paths
 
     @classmethod
-    def _load_data(cls, path):
+    def _load_data(cls, path, read_only=False):
         info_path = cls.get_info_path(path)
-        info_data = LooseAtomDict._load_data(info_path)
+        info_data = LooseAtomDict._load_data(info_path, read_only)
         for v, trace, parent in deep_iter_items(info_data, lambda x: is_loosely_str(x),  iter_get_data=False):
             info = extract_loosely_str(v)
             try:
-                obj = info['type'].load_from_disk(cls.get_child_path(path, info['file_name']))
+                obj = info['type'].load_from_disk(cls.get_child_path(path, info['file_name']), read_only)
                 obj.release()
                 # print(23)
                 # print('obj:', obj)
@@ -187,13 +187,17 @@ class LooseJSONTree(LooseTree):
                                         lambda item: isinstance(item, LooseBase) and item.can_load, iter_get_data=False):
                 obj.remove_from_disk()
     def __setitem__(self, key, item):
+        self.check_read_only()
         self._check_key(key)
         self.data = self.get_data()
         if key in self.data:
             old_item = self.data[key]
             self._deep_del_loosely_obj_from_disk(old_item)
-        if type(item) == np.ndarray:
+        t = type(item)
+        if t == np.ndarray:
             item = LooseAtomArray(item)
+        if type(item) == LooseAtomFunc.SUPPORT_INPUT_DATA_TYPE:
+            item = LooseAtomFunc(item)
         elif isinstance(item, nib.Nifti1Image):
             item = LooseAtomNifti(item)
 
@@ -204,6 +208,7 @@ class LooseJSONTree(LooseTree):
             # logger.info(f"New item for key '{key}' updated at {self.load_path}.")
 
     def __delitem__(self, key):
+        self.check_read_only()
         self._check_key(key)
         del_item = self.get_data()[key]
         self.data = self.get_data()
@@ -229,7 +234,7 @@ class LooseJSONTree(LooseTree):
     @classmethod
     def create_from_iter(cls, dir_path, iterator, length=None, verbose=True, **init_kwargs):
         obj = cls(**init_kwargs)
-        obj.save(dir_path, auto_release=False, info_autosave=False, verbose=False)
+        obj.save(dir_path, auto_release=False, info_autosave=True, verbose=False)
         obj.autoload()
         length_str = f" ({length} item{'s' if length > 1 else ''})" if length is not None else ''
         logger.info(f"{cls.__name__} initiate completely. Ready to create from iterator{length_str}.")
@@ -249,8 +254,8 @@ class LooseDict(LooseJSONTree):
     SUPPORT_INPUT_DATA_TYPE = LooseAtomDict.SUPPORT_INPUT_DATA_TYPE
     CLS_ALIAS = 'tree_dict'
 
-    def __init__(self, data={}):
-        super().__init__(data)
+    def __init__(self, data={}, read_only=False):
+        super().__init__(data, read_only)
 
     @property
     def extra_str(self):
@@ -271,9 +276,9 @@ class LooseArray(LooseJSONTree):
     SUPPORT_INPUT_DATA_TYPE = [list, tuple]
     CLS_ALIAS = 'tree_arr'
 
-    def __init__(self, data=list()):
+    def __init__(self, data=list(), read_only=False):
         data = list(data)
-        super().__init__(data)
+        super().__init__(data, read_only)
 
     def __len__(self):
         return len(self.get_data())

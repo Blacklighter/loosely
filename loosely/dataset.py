@@ -29,13 +29,13 @@ class LooseDataset(LooseDict):
     CLS_ALIAS = 'tree_dataset'
 
 
-    def __init__(self, meta={}, table=[], extra={}):
+    def __init__(self, meta={}, table=[], extra={}, read_only=False):
         data = {
-            'meta': LooseDict(meta),
-            'table': LooseArray(table),
-            'extra': LooseDict(extra)
+            'meta': LooseDict(meta, read_only),
+            'table': LooseArray(table, read_only),
+            'extra': LooseDict(extra, read_only)
         }
-        super().__init__(data)
+        super().__init__(data, read_only)
 
     @property
     def meta(self):
@@ -50,8 +50,8 @@ class LooseDataset(LooseDict):
         return self['extra']
     
     @classmethod
-    def _initiate_from_loaded_data(cls, loaded_data):
-        obj = cls()
+    def _initiate_from_loaded_data(cls, loaded_data, read_only=False):
+        obj = cls(read_only=read_only)
         for k, v in obj.data.items():
             v.release()
             v.load_path = loaded_data[k].load_path
@@ -98,9 +98,11 @@ class LooseDataset(LooseDict):
         dataset_cls = type('LooselyTransformedDataset', (Dataset,), {
             '__getitem__': _getter,
             '__len__': self.table.__len__,
+            'meta': LooseDict(self.meta, read_only=True),
+            'extra': LooseDict(self.extra, read_only=True),
+            '_src_dst': self
         })
         obj = dataset_cls()
-        setattr(obj, 'src_dst', self)
         return obj
 # class LooseDataset(LooseDict):
 #     # @meta_property

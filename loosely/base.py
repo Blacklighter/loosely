@@ -4,7 +4,7 @@ from enum import Enum
 from pathlib import Path
 import json, shutil, os
 from loguru import logger
-from loosely.utils import generate_id, remove_by_path
+from loosely.utils import generate_id, remove_by_path, deep_iter_items
 
 class FileType(Enum):
     DIRECTORY = 1
@@ -58,19 +58,33 @@ class LooseBase(ABC):
     SUPPORT_INPUT_DATA_TYPE = None
     CLS_ALIAS = ''
 
-    def __init__(self, data=None):
+    def __init__(self, data=None, read_only=False):
         load_path = None
         if type(data) == self.__class__:
-            if data.can_load:
-                if data.data is None:
+            if data.data is None:
+                if data.can_load:
                     load_path = data.load_path
                 else:
-                    data = data.data
-            else:
-                data = data.data
-        self._check_data(data)
+                    raise ValueError(f"Cannot initiate '{self.__class__.__name__}' object from an unloadable '{type(data).__name__}' object.")
+            data = data.data
+        else:
+            self._check_data(data)
         self.data = data
         self.load_path = load_path
+        self._read_only = read_only
+
+    @property
+    def read_only(self):
+        return self._read_only
+    
+    @read_only.setter
+    def read_only(self, new_value):
+        for obj, trace, parent in deep_iter_items(self.data, lambda x: isinstance(x, LooseBase), iter_get_data=False):
+            obj.read_only = new_value
+        self._read_only = new_value
+    def check_read_only(self):
+        if self.read_only:
+            raise PermissionError(f"The 'read_only' flag is {self.read_only}")
 
     @classmethod
     def _check_data(cls, data):
@@ -121,7 +135,7 @@ class LooseBase(ABC):
         cls.check_path_to_load(load_path)
 
     @abstractclassmethod
-    def _load_data(cls, path):
+    def _load_data(cls, path, read_only=False):
         pass
 
     @property
@@ -139,18 +153,18 @@ class LooseBase(ABC):
         return data
     
     @classmethod
-    def _initiate_from_loaded_data(cls, loaded_data):
-        return cls(loaded_data)
+    def _initiate_from_loaded_data(cls, loaded_data, read_only=False):
+        return cls(loaded_data, read_only=read_only)
 
     @classmethod
     def _after_load(cls, obj, load_path):
         obj.load_path = load_path
 
     @classmethod
-    def load_from_disk(cls, load_path):
+    def load_from_disk(cls, load_path, read_only=False):
         cls._before_load(load_path)
-        data = cls._load_data(load_path)
-        obj = cls._initiate_from_loaded_data(data)
+        data = cls._load_data(load_path, read_only)
+        obj = cls._initiate_from_loaded_data(data, read_only)
         cls._after_load(obj, load_path)
         return obj
 
@@ -160,7 +174,7 @@ class LooseBase(ABC):
         if load_path is None:
             raise ValueError('load_path and self.load_path cannot be None at the same time.')
         self._before_load(load_path)
-        self.data = self._load_data(load_path)
+        self.data = self._load_data(load_path, self.read_only)
         self._after_load(self, load_path)
         
 
@@ -181,6 +195,7 @@ class LooseBase(ABC):
         # pass
 
     def _before_save(self, save_path, allow_overwrite=True, verbose=True):
+        self.check_read_only()
         save_path = save_path if save_path is not None else self.load_path
         try:
             self.check_path_to_save(save_path)
@@ -249,6 +264,7 @@ class LooseBase(ABC):
         return {
             'class': self.__class__.__name__,
             'load_path': self.load_path,
+            'read_only': self.read_only,
             'data': str(self.data)
         }    
 

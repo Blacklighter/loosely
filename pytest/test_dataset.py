@@ -31,9 +31,14 @@ def test_LooseDataset_create():
 def test_LooseDataset_load():
     # load_path = utils.get_example_path('LooseDataset_example.dst')
     load_path = 'D:/documents/AcademicDocuments/customed_python_pkgs/loosely/examples/LooseDataset_example.dst'
-    dataset = LooseDataset.load_from_disk(load_path)
+    dataset = LooseDataset.load_from_disk(load_path, True)
+    # print(dataset.extra['template'])
+    # extra = dataset.extra.get_data()
+    # print(extra['template'])
+    # print(dataset.extra)
     torch_dataset = dataset.to_torch_dataset()
-    print(torch_dataset[1])
+    # print(torch_dataset.extra)
+    # print(torch_dataset[1])
     # print(dataset.table[1]['test1'])
     # print(dataset.meta)
     # print(dataset.meta['extra'].get_data())
